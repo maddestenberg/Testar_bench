@@ -1,0 +1,323 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 6 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/" /p:OutDir="/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0/" /p:OutputPath="/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0/" /p:PublishDir="/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/publish/" in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1
+// command took 0.99 sec and exited with 0
+// start dotnet  build -c Release --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/" /p:OutDir="/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0/" /p:OutputPath="/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0/" /p:PublishDir="/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/publish/" --output "/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0/" in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1
+// command took 2.32 sec and exited with 0
+// ***** Done, took 00:00:03 (3.36 sec)   *****
+// Found 6 benchmarks:
+//   SerializationBenchmarks.Json_Serialize: DefaultJob
+//   SerializationBenchmarks.Xml_Serialize: DefaultJob
+//   SerializationBenchmarks.Protobuf_Serialize: DefaultJob
+//   SerializationBenchmarks.Json_Deserialize: DefaultJob
+//   SerializationBenchmarks.Xml_Deserialize: DefaultJob
+//   SerializationBenchmarks.Protobuf_Deserialize: DefaultJob
+
+// **************************
+// Benchmark: SerializationBenchmarks.Json_Serialize: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet DataFormatBenchmark-DefaultJob-1.dll --anonymousPipes 121 122 --benchmarkName DataFormatBenchmark.Benchmarks.SerializationBenchmarks.Json_Serialize --job Default --benchmarkId 0 in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.23 (8.0.23, 8.0.2325.60607), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.DirectoryNotFoundException: Could not find a part of the path '/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0/Data/data.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64& fileLength, UnixFileMode& filePermissions, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at DataFormatBenchmark.Services.DataLoader.LoadTrainAnnouncementsFromJson(String path) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/Services/DataLoader.cs:line 12
+   at DataFormatBenchmark.Benchmarks.SerializationBenchmarks.Setup() in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/Benchmarks/SerializationBenchmarks.cs:line 25
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_0.Run(IHost host, String benchmarkName) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/DataFormatBenchmark-DefaultJob-1.notcs:line 176
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/DataFormatBenchmark-DefaultJob-1.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 3173 has exited with code 255.
+
+// ** Remained 5 (83,3 %) benchmark(s) to run. Estimated finish 2026-04-28 10:55 (0h 0m from now) **
+// **************************
+// Benchmark: SerializationBenchmarks.Xml_Serialize: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet DataFormatBenchmark-DefaultJob-1.dll --anonymousPipes 121 122 --benchmarkName DataFormatBenchmark.Benchmarks.SerializationBenchmarks.Xml_Serialize --job Default --benchmarkId 1 in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.23 (8.0.23, 8.0.2325.60607), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.DirectoryNotFoundException: Could not find a part of the path '/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0/Data/data.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64& fileLength, UnixFileMode& filePermissions, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at DataFormatBenchmark.Services.DataLoader.LoadTrainAnnouncementsFromJson(String path) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/Services/DataLoader.cs:line 12
+   at DataFormatBenchmark.Benchmarks.SerializationBenchmarks.Setup() in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/Benchmarks/SerializationBenchmarks.cs:line 25
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_1.Run(IHost host, String benchmarkName) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/DataFormatBenchmark-DefaultJob-1.notcs:line 373
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/DataFormatBenchmark-DefaultJob-1.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 3174 has exited with code 255.
+
+// ** Remained 4 (66,7 %) benchmark(s) to run. Estimated finish 2026-04-28 10:55 (0h 0m from now) **
+// **************************
+// Benchmark: SerializationBenchmarks.Protobuf_Serialize: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet DataFormatBenchmark-DefaultJob-1.dll --anonymousPipes 121 122 --benchmarkName DataFormatBenchmark.Benchmarks.SerializationBenchmarks.Protobuf_Serialize --job Default --benchmarkId 2 in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.23 (8.0.23, 8.0.2325.60607), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.DirectoryNotFoundException: Could not find a part of the path '/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0/Data/data.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64& fileLength, UnixFileMode& filePermissions, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at DataFormatBenchmark.Services.DataLoader.LoadTrainAnnouncementsFromJson(String path) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/Services/DataLoader.cs:line 12
+   at DataFormatBenchmark.Benchmarks.SerializationBenchmarks.Setup() in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/Benchmarks/SerializationBenchmarks.cs:line 25
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_2.Run(IHost host, String benchmarkName) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/DataFormatBenchmark-DefaultJob-1.notcs:line 570
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/DataFormatBenchmark-DefaultJob-1.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 3175 has exited with code 255.
+
+// ** Remained 3 (50,0 %) benchmark(s) to run. Estimated finish 2026-04-28 10:55 (0h 0m from now) **
+// **************************
+// Benchmark: SerializationBenchmarks.Json_Deserialize: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet DataFormatBenchmark-DefaultJob-1.dll --anonymousPipes 121 122 --benchmarkName DataFormatBenchmark.Benchmarks.SerializationBenchmarks.Json_Deserialize --job Default --benchmarkId 3 in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.23 (8.0.23, 8.0.2325.60607), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.DirectoryNotFoundException: Could not find a part of the path '/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0/Data/data.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64& fileLength, UnixFileMode& filePermissions, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at DataFormatBenchmark.Services.DataLoader.LoadTrainAnnouncementsFromJson(String path) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/Services/DataLoader.cs:line 12
+   at DataFormatBenchmark.Benchmarks.SerializationBenchmarks.Setup() in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/Benchmarks/SerializationBenchmarks.cs:line 25
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_3.Run(IHost host, String benchmarkName) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/DataFormatBenchmark-DefaultJob-1.notcs:line 767
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/DataFormatBenchmark-DefaultJob-1.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 3178 has exited with code 255.
+
+// ** Remained 2 (33,3 %) benchmark(s) to run. Estimated finish 2026-04-28 10:55 (0h 0m from now) **
+// **************************
+// Benchmark: SerializationBenchmarks.Xml_Deserialize: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet DataFormatBenchmark-DefaultJob-1.dll --anonymousPipes 121 122 --benchmarkName DataFormatBenchmark.Benchmarks.SerializationBenchmarks.Xml_Deserialize --job Default --benchmarkId 4 in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.23 (8.0.23, 8.0.2325.60607), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.DirectoryNotFoundException: Could not find a part of the path '/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0/Data/data.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64& fileLength, UnixFileMode& filePermissions, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at DataFormatBenchmark.Services.DataLoader.LoadTrainAnnouncementsFromJson(String path) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/Services/DataLoader.cs:line 12
+   at DataFormatBenchmark.Benchmarks.SerializationBenchmarks.Setup() in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/Benchmarks/SerializationBenchmarks.cs:line 25
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_4.Run(IHost host, String benchmarkName) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/DataFormatBenchmark-DefaultJob-1.notcs:line 964
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/DataFormatBenchmark-DefaultJob-1.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 3179 has exited with code 255.
+
+// ** Remained 1 (16,7 %) benchmark(s) to run. Estimated finish 2026-04-28 10:55 (0h 0m from now) **
+// **************************
+// Benchmark: SerializationBenchmarks.Protobuf_Deserialize: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet DataFormatBenchmark-DefaultJob-1.dll --anonymousPipes 121 122 --benchmarkName DataFormatBenchmark.Benchmarks.SerializationBenchmarks.Protobuf_Deserialize --job Default --benchmarkId 5 in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.23 (8.0.23, 8.0.2325.60607), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.DirectoryNotFoundException: Could not find a part of the path '/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/bin/Release/net8.0/Data/data.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64& fileLength, UnixFileMode& filePermissions, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at DataFormatBenchmark.Services.DataLoader.LoadTrainAnnouncementsFromJson(String path) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/Services/DataLoader.cs:line 12
+   at DataFormatBenchmark.Benchmarks.SerializationBenchmarks.Setup() in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/Benchmarks/SerializationBenchmarks.cs:line 25
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_5.Run(IHost host, String benchmarkName) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/DataFormatBenchmark-DefaultJob-1.notcs:line 1161
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/DataFormatBenchmark-DefaultJob-1/DataFormatBenchmark-DefaultJob-1.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 3180 has exited with code 255.
+
+// ** Remained 0 (0,0 %) benchmark(s) to run. Estimated finish 2026-04-28 10:55 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/DataFormatBenchmark.Benchmarks.SerializationBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts/results/DataFormatBenchmark.Benchmarks.SerializationBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts/results/DataFormatBenchmark.Benchmarks.SerializationBenchmarks-report.html
+
+// * Detailed results *
+SerializationBenchmarks.Json_Serialize: DefaultJob
+Runtime = .NET 8.0.23 (8.0.23, 8.0.2325.60607), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+There are not any results runs
+
+SerializationBenchmarks.Xml_Serialize: DefaultJob
+Runtime = .NET 8.0.23 (8.0.23, 8.0.2325.60607), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+There are not any results runs
+
+SerializationBenchmarks.Protobuf_Serialize: DefaultJob
+Runtime = .NET 8.0.23 (8.0.23, 8.0.2325.60607), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+There are not any results runs
+
+SerializationBenchmarks.Json_Deserialize: DefaultJob
+Runtime = .NET 8.0.23 (8.0.23, 8.0.2325.60607), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+There are not any results runs
+
+SerializationBenchmarks.Xml_Deserialize: DefaultJob
+Runtime = .NET 8.0.23 (8.0.23, 8.0.2325.60607), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+There are not any results runs
+
+SerializationBenchmarks.Protobuf_Deserialize: DefaultJob
+Runtime = .NET 8.0.23 (8.0.23, 8.0.2325.60607), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+There are not any results runs
+
+// * Summary *
+
+BenchmarkDotNet v0.15.8, macOS Tahoe 26.3.1 (a) (25D771280a) [Darwin 25.3.0]
+Apple M4, 1 CPU, 10 logical and 10 physical cores
+.NET SDK 8.0.417
+  [Host]     : .NET 8.0.23 (8.0.23, 8.0.2325.60607), Arm64 RyuJIT armv8.0-a
+  DefaultJob : .NET 8.0.23 (8.0.23, 8.0.2325.60607), Arm64 RyuJIT armv8.0-a
+
+
+| Method               | Mean | Error |
+|--------------------- |-----:|------:|
+| Json_Serialize       |   NA |    NA |
+| Xml_Serialize        |   NA |    NA |
+| Protobuf_Serialize   |   NA |    NA |
+| Json_Deserialize     |   NA |    NA |
+| Xml_Deserialize      |   NA |    NA |
+| Protobuf_Deserialize |   NA |    NA |
+
+Benchmarks with issues:
+  SerializationBenchmarks.Json_Serialize: DefaultJob
+  SerializationBenchmarks.Xml_Serialize: DefaultJob
+  SerializationBenchmarks.Protobuf_Serialize: DefaultJob
+  SerializationBenchmarks.Json_Deserialize: DefaultJob
+  SerializationBenchmarks.Xml_Deserialize: DefaultJob
+  SerializationBenchmarks.Protobuf_Deserialize: DefaultJob
+
+// * Legends *
+  Mean  : Arithmetic mean of all measurements
+  Error : Half of 99.9% confidence interval
+  1 ns  : 1 Nanosecond (0.000000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:00 (0.73 sec), executed benchmarks: 6
+
+Global total time: 00:00:04 (4.42 sec), executed benchmarks: 6
+// * Artifacts cleanup *
+Artifacts cleanup is finished
