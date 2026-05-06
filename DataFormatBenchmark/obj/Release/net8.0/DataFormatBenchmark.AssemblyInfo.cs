@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DataFormatBenchmark")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2dfa14bd3071764dbe6442c088eb0c1b531e4d2c")]
 [assembly: System.Reflection.AssemblyProductAttribute("DataFormatBenchmark")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DataFormatBenchmark")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

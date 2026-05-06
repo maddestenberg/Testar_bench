@@ -52,3 +52,4 @@
 /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/obj/Release/net8.0/DataFormatBenchmark.genruntimeconfig.cache
 /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/obj/Release/net8.0/ref/DataFormatBenchmark.dll
 /Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/bin/Release/net8.0/Data/data.json
+/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/obj/Release/net8.0/DataFormatBenchmark.sourcelink.json
