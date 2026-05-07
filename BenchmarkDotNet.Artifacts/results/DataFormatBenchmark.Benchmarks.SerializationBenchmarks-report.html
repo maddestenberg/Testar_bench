@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>DataFormatBenchmark.Benchmarks.SerializationBenchmarks-20260506-103307</title>
+<title>DataFormatBenchmark.Benchmarks.SerializationBenchmarks-20260506-135842</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -22,14 +22,14 @@ Apple M4, 1 CPU, 10 logical and 10 physical cores
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>Method        </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen0</th><th>Gen1</th><th>Allocated</th>
+<thead><tr><th>Method        </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen0</th><th>Gen1</th><th>Gen2</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>Json_Serialize</td><td>9.250 &mu;s</td><td>0.0770 &mu;s</td><td>0.0683 &mu;s</td><td>0.9613</td><td>-</td><td>7.89 KB</td>
-</tr><tr><td>Xml_Serialize</td><td>29.340 &mu;s</td><td>0.1872 &mu;s</td><td>0.1563 &mu;s</td><td>8.7891</td><td>0.7324</td><td>72.76 KB</td>
-</tr><tr><td>Protobuf_Serialize</td><td>5.584 &mu;s</td><td>0.0246 &mu;s</td><td>0.0218 &mu;s</td><td>0.6790</td><td>-</td><td>5.56 KB</td>
-</tr><tr><td>Json_Deserialize</td><td>19.314 &mu;s</td><td>0.1251 &mu;s</td><td>0.1170 &mu;s</td><td>1.8005</td><td>0.0916</td><td>14.77 KB</td>
-</tr><tr><td>Xml_Deserialize</td><td>54.396 &mu;s</td><td>0.3247 &mu;s</td><td>0.3037 &mu;s</td><td>4.8828</td><td>0.2441</td><td>41.51 KB</td>
-</tr><tr><td>Protobuf_Deserialize</td><td>10.136 &mu;s</td><td>0.0202 &mu;s</td><td>0.0189 &mu;s</td><td>1.9226</td><td>0.0916</td><td>15.8 KB</td>
+</thead><tbody><tr><td>Json_Serialize</td><td>194.26 &mu;s</td><td>2.056 &mu;s</td><td>1.822 &mu;s</td><td>184.0820</td><td>184.0820</td><td>52.4902</td><td>197.64 KB</td>
+</tr><tr><td>Xml_Serialize</td><td>514.42 &mu;s</td><td>6.382 &mu;s</td><td>5.970 &mu;s</td><td>302.7344</td><td>287.1094</td><td>248.0469</td><td>1051.24 KB</td>
+</tr><tr><td>Protobuf_Serialize</td><td>81.20 &mu;s</td><td>0.221 &mu;s</td><td>0.207 &mu;s</td><td>23.3154</td><td>-</td><td>-</td><td>192.65 KB</td>
+</tr><tr><td>Json_Deserialize</td><td>369.65 &mu;s</td><td>1.541 &mu;s</td><td>1.366 &mu;s</td><td>35.6445</td><td>11.2305</td><td>-</td><td>291.3 KB</td>
+</tr><tr><td>Xml_Deserialize</td><td>660.85 &mu;s</td><td>5.513 &mu;s</td><td>4.887 &mu;s</td><td>39.0625</td><td>11.7188</td><td>3.9063</td><td>320.76 KB</td>
+</tr><tr><td>Protobuf_Deserialize</td><td>100.47 &mu;s</td><td>0.219 &mu;s</td><td>0.205 &mu;s</td><td>27.5879</td><td>8.6670</td><td>-</td><td>225.74 KB</td>
 </tr></tbody></table>
 </body>
 </html>

@@ -1,22 +1,25 @@
 using System.Collections.Generic;
 using System.IO;
-using DataFormatBenchmark.Models;
 using ProtoBuf;
+using DataFormatBenchmark.Models;
 
 namespace DataFormatBenchmark.Services;
 
 public class ProtobufSerializerService
 {
-    public byte[] Serialize(List<TrainAnnouncement> data)
+    public byte[] Serialize(List<LaneData> data)
     {
-        using var stream = new MemoryStream();
-        Serializer.Serialize(stream, data);
-        return stream.ToArray();
+        using var memoryStream = new MemoryStream();
+
+        Serializer.Serialize(memoryStream, data);
+
+        return memoryStream.ToArray();
     }
 
-    public List<TrainAnnouncement> Deserialize(byte[] bytes)
+    public List<LaneData> Deserialize(byte[] bytes)
     {
-        using var stream = new MemoryStream(bytes);
-        return Serializer.Deserialize<List<TrainAnnouncement>>(stream);
+        using var memoryStream = new MemoryStream(bytes);
+
+        return Serializer.Deserialize<List<LaneData>>(memoryStream);
     }
 }

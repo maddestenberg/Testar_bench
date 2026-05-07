@@ -7,21 +7,22 @@ namespace DataFormatBenchmark.Services;
 
 public class XmlSerializerService
 {
-    public byte[] Serialize(List<TrainAnnouncement> data)
+    public byte[] Serialize(List<LaneData> data)
     {
-        var serializer = new XmlSerializer(typeof(List<TrainAnnouncement>));
+        var serializer = new XmlSerializer(typeof(List<LaneData>));
 
-        using var stream = new MemoryStream();
-        serializer.Serialize(stream, data);
+        using var memoryStream = new MemoryStream();
+        serializer.Serialize(memoryStream, data);
 
-        return stream.ToArray();
+        return memoryStream.ToArray();
     }
 
-    public List<TrainAnnouncement> Deserialize(byte[] bytes)
+    public List<LaneData> Deserialize(byte[] bytes)
     {
-        var serializer = new XmlSerializer(typeof(List<TrainAnnouncement>));
+        var serializer = new XmlSerializer(typeof(List<LaneData>));
 
-        using var stream = new MemoryStream(bytes);
-        return (List<TrainAnnouncement>)serializer.Deserialize(stream)!;
+        using var memoryStream = new MemoryStream(bytes);
+
+        return (List<LaneData>)serializer.Deserialize(memoryStream)!;
     }
 }

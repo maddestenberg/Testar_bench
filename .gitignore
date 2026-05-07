@@ -1,0 +1,31 @@
+# Build folders
+bin/
+obj/
+
+# BenchmarkDotNet
+BenchmarkDotNet.Artifacts/
+
+# VS Code
+.vscode/
+
+# Rider / JetBrains
+.idea/
+
+# Visual Studio
+.vs/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# User-specific files
+*.user
+*.suo
+
+# NuGet packages (optional)
+packages/
+
+# Generated results
+Results/

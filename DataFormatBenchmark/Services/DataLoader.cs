@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.IO;
 using System.Text.Json;
 using DataFormatBenchmark.Models;
 
@@ -7,16 +5,22 @@ namespace DataFormatBenchmark.Services;
 
 public class DataLoader
 {
-    public List<TrainAnnouncement> LoadTrainAnnouncementsFromJson(string path)
+    public List<LaneData> LoadLaneDataFromJson(string path)
     {
         var json = File.ReadAllText(path);
 
-        var apiResponse = JsonSerializer.Deserialize<TrafficApiResponse>(json);
+        var options = new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        };
 
-        return apiResponse?
-            .RESPONSE?
-            .RESULT?[0]
-            .TrainAnnouncement 
-            ?? new List<TrainAnnouncement>();
+        var response = JsonSerializer.Deserialize<LaneApiResponse>(json, options);
+
+        var data = response?.RESPONSE?.RESULT?[0].AntalKörfält2 
+                   ?? new List<LaneData>();
+
+        Console.WriteLine($"Loaded LaneData objects: {data.Count}");
+
+        return data;
     }
 }

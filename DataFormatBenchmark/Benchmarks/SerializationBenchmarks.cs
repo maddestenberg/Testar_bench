@@ -9,7 +9,7 @@ namespace DataFormatBenchmark.Benchmarks;
 [MemoryDiagnoser]
 public class SerializationBenchmarks
 {
-    private List<TrainAnnouncement> _data;
+    private List<LaneData> _data;
 
     private readonly DataLoader _loader = new();
     private readonly JsonSerializerService _jsonService = new();
@@ -28,7 +28,7 @@ public class SerializationBenchmarks
     [GlobalSetup]
     public void Setup()
     {
-        _data = _loader.LoadTrainAnnouncementsFromJson("Data/data.json");
+        _data = _loader.LoadLaneDataFromJson("Data/data2.json");
 
         // Vanlig serialization
         _jsonBytes = _jsonService.Serialize(_data);
@@ -89,23 +89,23 @@ public class SerializationBenchmarks
         return _protoService.Serialize(_data);
     }
 
-    // DESERIALIZATION
+   // DESERIALIZATION
 
-    [Benchmark]
-    public List<TrainAnnouncement>? Json_Deserialize()
-    {
-        return _jsonService.Deserialize(_jsonBytes);
-    }
+[Benchmark]
+public List<LaneData>? Json_Deserialize()
+{
+    return _jsonService.Deserialize(_jsonBytes);
+}
 
-    [Benchmark]
-    public List<TrainAnnouncement> Xml_Deserialize()
-    {
-        return _xmlService.Deserialize(_xmlBytes);
-    }
+[Benchmark]
+public List<LaneData> Xml_Deserialize()
+{
+    return _xmlService.Deserialize(_xmlBytes);
+}
 
-    [Benchmark]
-    public List<TrainAnnouncement> Protobuf_Deserialize()
-    {
-        return _protoService.Deserialize(_protoBytes);
-    }
+[Benchmark]
+public List<LaneData> Protobuf_Deserialize()
+{
+    return _protoService.Deserialize(_protoBytes);
+}
 }

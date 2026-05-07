@@ -2438,11 +2438,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/DataFormatBenchmark.csproj",
+      "projectUniqueName": "/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench 2/DataFormatBenchmark/DataFormatBenchmark.csproj",
       "projectName": "DataFormatBenchmark",
-      "projectPath": "/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/DataFormatBenchmark.csproj",
+      "projectPath": "/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench 2/DataFormatBenchmark/DataFormatBenchmark.csproj",
       "packagesPath": "/Users/mads/.nuget/packages/",
-      "outputPath": "/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/obj/",
+      "outputPath": "/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench 2/DataFormatBenchmark/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mads/.nuget/NuGet/NuGet.Config"

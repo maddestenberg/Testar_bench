@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9bsU9cm9QjU=",
+  "dgSpecHash": "d+SCjf/FUyA=",
   "success": true,
-  "projectFilePath": "/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench/DataFormatBenchmark/DataFormatBenchmark.csproj",
+  "projectFilePath": "/Users/mads/Desktop/SYSTEMVET/T6 SYSTEMVET/examensarbete/Testar_bench 2/DataFormatBenchmark/DataFormatBenchmark.csproj",
   "expectedPackageFiles": [
     "/Users/mads/.nuget/packages/benchmarkdotnet/0.15.8/benchmarkdotnet.0.15.8.nupkg.sha512",
     "/Users/mads/.nuget/packages/benchmarkdotnet.annotations/0.15.8/benchmarkdotnet.annotations.0.15.8.nupkg.sha512",
